@@ -25,7 +25,6 @@ class MyGame(arcade.Window):
         self.animal_sprite.center_x = 400
         self.animal_sprite.center_y = 300
         self.animal_list.append(self.animal_sprite)
-        
 
     def on_draw(self):
         arcade.start_render()
@@ -37,7 +36,8 @@ class MyGame(arcade.Window):
 
 
     def on_mouse_motion(self, x, y, dx, dy):
-        pass
+        self.animal_sprite.center_x = x
+        self.animal_sprite.center_y = y
 
 def main():
     """ Main method """
